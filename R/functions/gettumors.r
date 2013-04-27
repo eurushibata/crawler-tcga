@@ -4,8 +4,8 @@ library(rjson)
 library(plyr)
 
 getTumors <- function() {
-	tumormain <- "https://tcga-data.nci.nih.gov/tcga/damws/tumormain/json"
-	json <- getURL(tumormain)
+	uri <- "https://tcga-data.nci.nih.gov/tcga/damws/tumormain/json"
+	json <- getURL(uri)
 	rjson <- fromJSON(json)
 
 	tumors <- NULL
